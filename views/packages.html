@@ -1,10 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Travel Packages</title>
-<link rel="stylesheet" href="/css/style.css">
+<title>Travel Packages - TravelX</title>
+
+<!-- Critical CSS -->
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#f5f7fb;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+background:#fff;
+box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+color:#007bff;
+}
+
+.nav-links{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+.packages{
+padding:60px 80px;
+text-align:center;
+}
+
+</style>
+
+<!-- Correct CSS path -->
+<link rel="stylesheet" href="/css/style.min.css">
+
 </head>
 
 <body>
@@ -28,7 +75,7 @@
 <div class="package-container">
 
 <div class="package-card">
-<img src="/images/paris.jpg">
+<img src="/images/optimized/paris.jpg" loading="lazy" alt="Paris Tour">
 <h3>Paris Tour</h3>
 <p>5 Days / 4 Nights</p>
 <h2>₹65,000</h2>
@@ -36,7 +83,7 @@
 </div>
 
 <div class="package-card">
-<img src="/images/bali.jpg">
+<img src="/images/optimized/bali.jpg" loading="lazy" alt="Bali Vacation">
 <h3>Bali Vacation</h3>
 <p>4 Days / 3 Nights</p>
 <h2>₹48,000</h2>
@@ -44,7 +91,7 @@
 </div>
 
 <div class="package-card">
-<img src="/images/maldives.jpg">
+<img src="/images/optimized/maldives.jpg" loading="lazy" alt="Maldives Luxury">
 <h3>Maldives Luxury</h3>
 <p>6 Days / 5 Nights</p>
 <h2>₹82,000</h2>
@@ -55,7 +102,9 @@
 
 </section>
 
+<!-- Correct JS path -->
 <script src="/js/script.js"></script>
 
 </body>
+
 </html>

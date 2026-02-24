@@ -1,10 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Travel Gallery</title>
-<link rel="stylesheet" href="/css/style.css">
+<title>Travel Gallery - TravelX</title>
+
+<!-- Critical CSS -->
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#f5f7fb;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+background:#fff;
+box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+color:#007bff;
+}
+
+.nav-links{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+.gallery{
+padding:60px 80px;
+text-align:center;
+}
+
+</style>
+
+<!-- Correct CSS path -->
+<link rel="stylesheet" href="/css/style.min.css">
+
 </head>
 
 <body>
@@ -27,15 +74,15 @@
 
 <div class="gallery-grid">
 
-<img src="/images/paris.jpg">
-<img src="/images/bali.jpg">
-<img src="/images/maldives.jpg">
-<img src="/images/switzerland.jpg">
-<img src="/images/dubai.jpg">
-<img src="/images/japan.jpg">
-<img src="/images/beach.jpg">
-<img src="/images/mountain.jpg">
-<img src="/images/island.jpg">
+<img src="/images/optimized/paris.jpg" loading="lazy" alt="Paris">
+<img src="/images/optimized/bali.jpg" loading="lazy" alt="Bali">
+<img src="/images/optimized/maldives.jpg" loading="lazy" alt="Maldives">
+<img src="/images/optimized/switzerland.jpg" loading="lazy" alt="Switzerland">
+<img src="/images/optimized/dubai.jpg" loading="lazy" alt="Dubai">
+<img src="/images/optimized/japan.jpg" loading="lazy" alt="Japan">
+<img src="/images/optimized/beach.jpg" loading="lazy" alt="Beach">
+<img src="/images/optimized/mountain.jpg" loading="lazy" alt="Mountain">
+<img src="/images/optimized/island.jpg" loading="lazy" alt="Island">
 
 </div>
 
@@ -48,7 +95,9 @@
 <img id="modal-img">
 </div>
 
+<!-- Correct JS path -->
 <script src="/js/script.js"></script>
 
 </body>
+
 </html>

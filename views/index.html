@@ -1,84 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TravelX - Explore the World</title>
-<link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelX - Explore the World</title>
+
+    <!-- Critical CSS -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #f5f7fb;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 80px;
+            background: #fff;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0077ff;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* HERO */
+
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+
+            background: url("/images/hero.jpg") center/cover no-repeat;
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .45);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+
+    <!-- Correct CSS path -->
+    <link rel="stylesheet" href="/css/style.min.css">
+
 </head>
 
 <body>
 
-<!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">TravelX</div>
 
-<nav class="navbar">
-<div class="logo">TravelX</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/destinations">Destinations</a></li>
+            <li><a href="/packages">Packages</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
 
-<ul class="nav-links">
-<li><a href="/">Home</a></li>
-<li><a href="/destinations">Destinations</a></li>
-<li><a href="/packages">Packages</a></li>
-<li><a href="/gallery">Gallery</a></li>
-<li><a href="/contact">Contact</a></li>
-</ul>
-</nav>
+    <section class="hero">
 
-<!-- Hero Section -->
+        <div class="hero-content">
+            <h1>Explore The World With Us</h1>
+            <p>Find amazing destinations and unforgettable experiences.</p>
 
-<section class="hero">
+            <div class="search-box">
+                <input type="text" placeholder="Search destination...">
+                <button>Search</button>
+            </div>
 
-<div class="hero-content">
-<h1>Explore The World With Us</h1>
-<p>Find amazing destinations and unforgettable experiences.</p>
+        </div>
 
-<div class="search-box">
-<input type="text" placeholder="Search destination...">
-<button>Search</button>
-</div>
+    </section>
 
-</div>
+    <section class="destinations">
 
-</section>
+        <h2>Popular Destinations</h2>
 
-<!-- Popular Destinations -->
+        <div class="cards">
 
-<section class="destinations">
+            <div class="card">
+                <img src="/images/optimized/paris.jpg" loading="lazy" alt="Paris">
+                <h3>Paris</h3>
+                <p>The city of love and lights.</p>
+            </div>
 
-<h2>Popular Destinations</h2>
+            <div class="card">
+                <img src="/images/optimized/bali.jpg" loading="lazy" alt="Bali">
+                <h3>Bali</h3>
+                <p>Tropical paradise beaches.</p>
+            </div>
 
-<div class="cards">
+            <div class="card">
+                <img src="/images/optimized/maldives.jpg" loading="lazy" alt="Maldives">
+                <h3>Maldives</h3>
+                <p>Luxury island destination.</p>
+            </div>
 
-<div class="card">
-<img src="/images/paris.jpg">
-<h3>Paris</h3>
-<p>The city of love and lights.</p>
-</div>
+        </div>
 
-<div class="card">
-<img src="/images/bali.jpg">
-<h3>Bali</h3>
-<p>Tropical paradise beaches.</p>
-</div>
+    </section>
 
-<div class="card">
-<img src="/images/maldives.jpg">
-<h3>Maldives</h3>
-<p>Luxury island destination.</p>
-</div>
+    <footer>
+        <p>© 2026 TravelX | Explore the world by Roshan Mishra</p>
+    </footer>
 
-</div>
-
-</section>
-
-<!-- Footer -->
-
-<footer>
-
-<p>© 2026 TravelX | Explore the world by Roshan Mishra</p>
-
-</footer>
-
-<script src="/js/script.js"></script>
+    <script src="/js/script.js"></script>
 
 </body>
+
 </html>

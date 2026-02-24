@@ -1,8 +1,12 @@
+// ============================
+// DESTINATION SEARCH FILTER
+// ============================
+
 const searchInput = document.getElementById("search");
 
-if(searchInput){
+if (searchInput) {
 
-searchInput.addEventListener("keyup", function(){
+searchInput.addEventListener("keyup", function () {
 
 let filter = searchInput.value.toLowerCase();
 let cards = document.querySelectorAll(".destination-card");
@@ -11,10 +15,9 @@ cards.forEach(card => {
 
 let text = card.innerText.toLowerCase();
 
-if(text.includes(filter)){
+if (text.includes(filter)) {
 card.style.display = "block";
-}
-else{
+} else {
 card.style.display = "none";
 }
 
@@ -25,61 +28,108 @@ card.style.display = "none";
 }
 
 
-function bookPackage(packageName){
+// ============================
+// PACKAGE BOOK BUTTON
+// ============================
+
+function bookPackage(packageName) {
 alert("You selected: " + packageName + " package");
 }
 
 
+// ============================
+// GALLERY IMAGE MODAL
+// ============================
 
-const images = document.querySelectorAll(".gallery-grid img")
-const modal = document.getElementById("modal")
-const modalImg = document.getElementById("modal-img")
-const closeBtn = document.getElementById("close")
+const images = document.querySelectorAll(".gallery-grid img");
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modal-img");
+const closeBtn = document.getElementById("close");
 
-if(images){
+if (images.length > 0 && modal && modalImg) {
 
 images.forEach(img => {
 
 img.addEventListener("click", () => {
-modal.style.display = "flex"
-modalImg.src = img.src
-})
+modal.style.display = "flex";
+modalImg.src = img.src;
+});
 
-})
+});
 
 }
 
-if(closeBtn){
+if (closeBtn && modal) {
 
 closeBtn.addEventListener("click", () => {
-modal.style.display = "none"
-})
+modal.style.display = "none";
+});
 
 }
 
 
+// ============================
+// CONTACT FORM VALIDATION
+// ============================
 
-const form = document.getElementById("contactForm")
+const form = document.getElementById("contactForm");
 
-if(form){
+if (form) {
 
-form.addEventListener("submit", function(e){
+form.addEventListener("submit", function (e) {
 
-e.preventDefault()
+e.preventDefault();
 
-let name = document.getElementById("name").value
-let email = document.getElementById("email").value
-let message = document.getElementById("message").value
+let name = document.getElementById("name").value.trim();
+let email = document.getElementById("email").value.trim();
+let message = document.getElementById("message").value.trim();
 
-if(name === "" || email === "" || message === ""){
-alert("Please fill all fields")
-return
+if (name === "" || email === "" || message === "") {
+alert("Please fill all fields");
+return;
 }
 
-alert("Message sent successfully!")
+alert("Message sent successfully!");
 
-form.reset()
+form.reset();
 
-})
+});
+
+}
+
+
+// ============================
+// HERO IMAGE CAROUSEL
+// ============================
+/* HERO CAROUSEL */
+
+const hero = document.querySelector(".hero")
+
+if(hero){
+
+const heroImages = [
+"/images/optimized/hero.jpg",
+"/images/optimized/bali.jpg",
+"/images/optimized/paris.jpg",
+"/images/optimized/maldives.jpg"
+]
+
+let index = 0
+
+function changeHero(){
+
+hero.style.backgroundImage = `url(${heroImages[index]})`
+
+index++
+
+if(index >= heroImages.length){
+index = 0
+}
+
+}
+
+changeHero()
+
+setInterval(changeHero, 4000)
 
 }
